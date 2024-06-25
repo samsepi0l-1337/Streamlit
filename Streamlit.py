@@ -2,7 +2,8 @@ import streamlit as st
 
 
 def get_user_name():
-    return "John"
+    name = st.text_input("Enter your name")
+    return name
 
 
 with st.echo():
