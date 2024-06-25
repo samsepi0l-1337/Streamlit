@@ -43,3 +43,10 @@ st.subheader(f"Map of all pickups at {hour_to_filter}:00")
 st.map(filtered_data)
 
 hour_to_filter = st.slider("hour", 0, 23, 17)  # min: 0h, max: 23h, default: 17h
+
+st.subheader("Raw data")
+st.write(data)
+
+if st.checkbox("Show raw data"):
+    st.subheader("Raw data")
+    st.write(data)
