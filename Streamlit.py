@@ -1,11 +1,23 @@
 import streamlit as st
 
-st.write("This is some text.")
 
-st.slider("This is a slider", 0, 100, (25, 75))
+def get_user_name():
+    return "John"
 
-st.divider()  # 👈 Draws a horizontal rule
 
-st.write("This text is between the horizontal rules.")
+with st.echo():
+    # Everything inside this block will be both printed to the screen
+    # and executed.
 
-st.divider()  # 👈 Another horizontal rule
+    def get_punctuation():
+        return "!!!"
+
+    greeting = "Hi there, "
+    value = get_user_name()
+    punctuation = get_punctuation()
+
+    st.write(greeting, value, punctuation)
+
+# And now we're back to _not_ printing to the screen
+foo = "bar"
+st.write("Done!")
