@@ -11,6 +11,7 @@ DATA_URL = (
 )
 
 
+@st.cache_data
 def load_data(nrows):
     data = pd.read_csv(DATA_URL, nrows=nrows)
     lowercase = lambda x: str(x).lower()
