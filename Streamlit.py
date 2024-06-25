@@ -1,24 +1,11 @@
-# Draw a title and some text to the app:
-"""
-# This is the document title
+import streamlit as st
 
-This is some _markdown_.
-"""
+st.write("This is some text.")
 
-import pandas as pd
+st.slider("This is a slider", 0, 100, (25, 75))
 
-df = pd.DataFrame({"col1": [1, 2, 3]})
-df  # 👈 Draw the dataframe
+st.divider()  # 👈 Draws a horizontal rule
 
-x = 10
-"x", x  # 👈 Draw the string 'x' and then the value of x
+st.write("This text is between the horizontal rules.")
 
-# Also works with most supported chart types
-import matplotlib.pyplot as plt
-import numpy as np
-
-arr = np.random.normal(1, 1, size=100)
-fig, ax = plt.subplots()
-ax.hist(arr, bins=20)
-
-fig  # 👈 Draw a Matplotlib chart
+st.divider()  # 👈 Another horizontal rule
